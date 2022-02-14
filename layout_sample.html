@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자유레이아웃</title>
+        <meta charset="utf-8" />
+        <style>
+            body{
+                margin: 0px;
+            }
+            #wrap{
+                min-width: 760px;
+                max-width: 1920px;
+                margin: 0px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            #main img{
+                width: 100%;
+            }
+            .clearfix::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            header h1{
+                float: left;
+                margin: 0px 0px 0px 50px;
+            }
+            header img{
+                margin: 5px 15px;
+                width: 90px;
+            }
+            nav ul{
+                float: right;
+                padding: 0px;
+                margin-right: 50px;
+            }
+            nav li{
+                list-style: none;
+                float: left;
+                padding-right: 20px;
+                margin-top: 10px;
+                margin-right: 20px;
+                border-right: solid 2px #ffcd00;;
+            }
+            nav li:last-child{
+                border-right: none;
+                margin-right: 0px;
+            }
+            nav a{
+                color: gray;
+                text-decoration: none;
+            }
+            nav a:hover{
+                color: #ffcd00;
+                text-decoration: underline;
+            }
+            footer{
+                background-color: black;
+                color: white;
+            }
+            footer h2{
+                color: #ffcd00;
+            }
+            .footer{
+                margin: 0px 50px;
+            }
+            .footer_content{
+                width: calc(33% - 120px);
+                margin: 20px 60px;
+                float: left;
+            }
+            footer img{
+                width: 80px;
+            }
+            footer h2{
+                margin-top: 15px;
+            }
+            #img_h2{
+                margin: 0px;
+            }
+            footer a{
+                color: gray;
+                text-decoration: none;
+            }
+            footer a:hover{
+                color: #ffcd00;
+            }
+            footer ul{
+                padding-left: 18px;
+                margin: 0px;
+            }
+            footer li{
+                margin: 10px 0px;
+                list-style: circle;
+            }
+            footer h3{
+                margin: 10px 0px;
+            }
+            .FC{
+                margin-top: 30px;
+            }
+            footer dd{
+                margin: 5px 0px;
+                font-size: 12px;
+                color: gray;
+            }
+            #copy{
+                text-align: center;
+                color: gray;
+                padding: 10px;
+                font-size: 10px;
+                margin: 0px;
+            }
+            .line{
+                width: 90%;
+                border-top: solid 1px lightgrey;
+                margin: 0px auto;
+            }
+            input{
+                height: 20px;
+            }
+            input, textarea{
+                width: 100%;
+                border: none;
+                background-color: rgb(36, 36, 36);
+                color: white;
+            }
+            input::placeholder, textarea::placeholder{
+                color:gray;
+            }
+            button{
+                margin-top: 15px;
+                background-color: gray;
+                width: 100%;
+                height: 30px;
+                color: white;
+            }
+            button:hover{
+                background-color: #ffcd00;
+            }
+            #text1{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                float: left;
+                padding: 10%;
+                margin: 0px;
+                position: relative;
+            }
+            #text1::after{
+                width: 100%;
+                height: 100%;
+                content: "";
+                background-image: url(./layout_image/단체.jpg);
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                opacity: 0.15;
+            }
+            #text1 dt{
+                font-size: 30px;
+            }
+            #text1 dd{
+                margin: 40px 0px;
+                text-align: center;
+            }
+            #text1 li{
+                list-style: circle;
+            }
+            .long_line{
+                width: 90%;
+                margin: 40px auto;
+                border-bottom: solid 1px gray;
+                margin-top: 0px;
+            }
+            .short_line{
+                width: 80%;
+                border-top: solid 1px lightgrey;
+                margin: 40px auto;
+            }
+            #content1{
+                margin: 0px;
+            }
+            #content2{
+                margin: 0px;
+                padding: 0px 25%;
+            }
+            #content2 a{
+                text-decoration: none;
+            }
+            #content2 img{
+                width: calc(16% - 60px);
+                margin: 0px 30px;
+            }
+            #content3, #content4, #contnent5{
+                margin: 60px 5%;
+            }
+            #content2 h2, #content3 h2, #content4 h2, #content5 h2{
+                text-align: center;
+                margin: 30px 0px;
+            }
+            .profile{
+                float: left;
+                width: calc(25% - 40px);
+                margin: 10px 20px;
+            }
+            .profile img{
+                width: 100%;
+            }
+            .profile a img{
+                width: 30px;
+            }
+            .profile_top{
+                position: relative;
+            }
+            .tag{
+                background-color: rgba(0, 0, 0, 0.220);
+                color: white;
+                display: inline-block;
+                padding: 5px;
+                position: absolute;
+                left: 0px;
+                top: 20px;
+            }
+            #content3 dt{
+                font-size: 20px;
+            }
+            #content3 dd{
+                color: gray;
+                margin: 0px;
+            }
+            #content4 img{
+                width: 100%;
+            }
+            #members{
+                width: 90%;
+                margin: 0px auto;
+            }
+            .music{
+                width: 80%;
+                margin: 0px auto;
+            }
+            .music td{
+                width: 50%;
+                padding: 3%;
+            }
+            .music dd{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0px;
+                font-size: 14px;
+                padding-left: 10px;
+                padding-bottom: 20px;
+            }
+            .music li{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0px;
+                font-size: 14px;
+            }
+            .music dt{
+                font-size: 18px;
+            }
+            .music dt,h3{
+                margin: 15px 0px;
+            }
+            .music ol{
+                padding-left: 25px;
+            }
+            sub{
+                margin-left: 3px;
+                color: gray;
+                font-size: 8px;
+            }
+            sup{
+                color: gray;
+                padding: 1px;
+                margin-left: 5px;
+                font-size: 8px;
+            }
+            #title1:hover #sup1, #title2:hover #sup2, #title3:hover #sup3, #title4:hover #sup4, #title5:hover #sup5{
+                background-color: #ffcd00;
+                color: black;
+            }
+            div{
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header class="clearfix">
+                <h1><img src="./layout_image/logo.png" alt="투 데이 올드 스니커즈 검정 로고" title="logo1" /></h1>
+                <nav class="clearfix">
+                    <ul class="clearfix">
+                        <li><a href="layout1.html" target="_blank" alt="layout1 이동 링크" title="layout1">Layout1</a></li>
+                        <li><a href="layout2.html" target="_blank" alt="layout2 이동 링크" title="layout2">Layout2</a></li>
+                        <li><a href="layout3.html" target="_blank" alt="layout3 이동 링크" title="layout3">Layout3</a></li>
+                        <li><a href="layout_sample.html" target="_blank" alt="자유 layout 이동 링크" title="layout_sample">2 DAY OLD SNEAKERS</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="content">
+                <div id="content1" class="clearfix">
+                    <div id="text1">
+                        <dl>
+                            <dt><i><b>"이틀된 신발로 무리하는 애들"</b></i></dt>
+                            <dd>
+                                ‘투 데이 올드 스니커즈’는 온라인 커뮤니티 ‘음악인의 자유 공간 뮬’에서 만나 결성된 4인조 개러지 록밴드이다.<br />
+                                기타 치는 주해승과 노래하는 심도언, 드럼 치는 손민욱과 미소천사 류호진으로 구성된 투 데이 올드 스니커즈, 
+                                aka 투올즈는 2018년 결성 이후 고집스럽게 ‘개러지 록’이라는 한 우물을 파고 있다.<br />
+                                한국 인디 씬에서 개러지 록으로는 성공할 수 없다는 많은 이들의 만류에도 한 가지 장르를 고집하는, 말 그대로 ‘무리하는 애들’이다.
+                            </dd>
+                            <dd>
+                                키치한 가사들과 강렬하고 중독성 있는 리프로 단단한 사운드를 만든다.<br />
+                                직선적인 사운드 속에서는 한국 특유의 장단과 장난스러운 선율이 느껴지기도 한다.<br />
+                                정통 개러지록에서 영향을 받았지만 투올즈만의 색깔을 만들어 내며 그들의 고집이 아집이 아님을 증명해 나가고 있다.
+                            </dd>
+                        </dl>
+                        <ul>
+                            <li>2021 KT&G 상상마당 '나의 첫번째 콘서트' 공연팀 선정</li>
+                            <li>2021 STARBUCKS & MINI 바이럴 광고 출연</li>
+                            <li>2021 다방 유튜브 채널 '일상다방사' 홍대편 출연</li>
+                            <li>2019 KT&G 상상마당 '언더 더 루프 With 웨터' 공연팀 선정</li>
+                            <li>2019 무소속프로젝트 본선진출</li>
+                            <li>2018 세계밴드대회 '이머겐자' 국내팀 선발전 결승 진출</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="long_line"></div>
+                <section id="content2">
+                    <h2>SNS</h2>
+                    <div>
+                        <a href="https://www.youtube.com/channel/UC60t76tl766S3lESW6L_hGw" target="_blank" alt="유튜브 이동 링크" title="유튜브">
+                            <img src="./layout_image/유튜브검.png" alt="유튜브 로고" title="유튜브" 
+                            onmouseover="this.src='./layout_image/유튜브노.png'" onmouseout="this.src='./layout_image/유튜브검.png'" />
+                        </a>
+                        <a href="https://soundcloud.com/band2dos" target="_blank" alt="사운드클라우드 이동 링크" title="사운드클라우드">
+                            <img src="./layout_image/사운드클라우드검.png" alt="사운드클라우드 로고" title="사운드클라우드" 
+                            onmouseover="this.src='./layout_image/사운드클라우드노.png'" onmouseout="this.src='./layout_image/사운드클라우드검.png'" />
+                        </a>
+                        <a href="https://open.spotify.com/artist/5UEtEaPNFbiU8KGganPF4Q" target="_blank" alt="스포티파이 이동 링크" title="스포티파이">
+                            <img src="./layout_image/스포티파이검.png" alt="스포티파이 로고" title="스포티파이" 
+                            onmouseover="this.src='./layout_image/스포티파이노.png'" onmouseout="this.src='./layout_image/스포티파이검.png'" />
+                        </a>
+                        <a href="https://www.instagram.com/2dayoldsneakers/" target="_blank" alt="인스타그램 이동 링크" title="인스타그램">
+                            <img src="./layout_image/인스타그램검.png" alt="인스타그램 로고" title="인스타그램" 
+                            onmouseover="this.src='./layout_image/인스타그램노.png'" onmouseout="this.src='./layout_image/인스타그램검.png'" />
+                        </a>
+                        <a href="https://www.facebook.com/band2dos" target="_blank" alt="페이스북 이동 링크" title="페이스북">
+                            <img src="./layout_image/페이스북검.png" alt="페이스북 로고" title="페이스북" 
+                            onmouseover="this.src='./layout_image/페이스북노.png'" onmouseout="this.src='./layout_image/페이스북검.png'" />
+                        </a>
+                        <a href="https://twitter.com/2dayoldsneakers" target="_blank" alt="트위터 이동 링크" title="트위터">
+                            <img src="./layout_image/트위터검.png" alt="트위터 로고" title="트위터" 
+                            onmouseover="this.src='./layout_image/트위터노.png'" onmouseout="this.src='./layout_image/트위터검.png'" />
+                        </a>
+                    </div>
+                </section>
+                <div class="short_line"></div>
+                <section id="content3">
+                    <h2>Members</h2>
+                    <div id="members" class="clearfix">
+                        <div class="profile">
+                            <div class="profile_top">
+                                <img src="./layout_image/ShimDoUn.jpg" alt="심도언" title="ShimDoUn" />
+                                <div class="tag">심도언</div>
+                            </div>
+                            <dl>
+                                <dt>Shim Do Un</dt>
+                                <dd>Vocal & Guitar</dd>
+                            </dl>
+                            <a href="https://www.instagram.com/undo_sh/" target="_blank" alt="심도언 인스타그램 이동 링크" title="심도언">
+                                <img src="./layout_image/인스타그램검.png" alt="인스타그램 로고" title="인스타그램" 
+                                onmouseover="this.src='./layout_image/인스타그램노.png'" onmouseout="this.src='./layout_image/인스타그램검.png'" />
+                            </a>
+                        </div>
+                        <div class="profile">
+                            <div class="profile_top">
+                                <img src="./layout_image/JooHaeSeung.jpg" alt="주해승" title="JooHaeSeung" />
+                                <div class="tag">주해승</div>
+                            </div>
+                            <dl>
+                                <dt>Joo Hae Seung</dt>
+                                <dd>Guitar & Leader</dd>
+                            </dl>
+                            <a href="https://www.instagram.com/jooooo_hs/" target="_blank" alt="주해승 인스타그램 이동 링크" title="주해승">
+                                <img src="./layout_image/인스타그램검.png" alt="인스타그램 로고" title="인스타그램" 
+                                onmouseover="this.src='./layout_image/인스타그램노.png'" onmouseout="this.src='./layout_image/인스타그램검.png'" />
+                            </a>
+                        </div>
+                        <div class="profile">
+                            <div class="profile_top">
+                                <img src="./layout_image/SonMinUk.jpg" alt="손민욱" title="SonMinUk" />
+                                <div class="tag">손민욱</div>
+                            </div>
+                            <dl>
+                                <dt>Son Min Uk</dt>
+                                <dd>Drum & Chorus</dd>
+                            </dl>
+                            <a href="https://www.instagram.com/gokoooo_/" target="_blank" alt="손민욱 인스타그램 이동 링크" title="손민욱">
+                                <img src="./layout_image/인스타그램검.png" alt="인스타그램 로고" title="인스타그램" 
+                                onmouseover="this.src='./layout_image/인스타그램노.png'" onmouseout="this.src='./layout_image/인스타그램검.png'" />
+                            </a>
+                        </div>
+                        <div class="profile">
+                            <div class="profile_top">
+                                <img src="./layout_image/RyuHoJin.png" alt="류호진" title="RyuHoJin" />
+                                <div class="tag">류호진</div>
+                            </div>
+                            <dl>
+                                <dt>Ryu Ho Jin</dt>
+                                <dd>Bass & Smiling Angel</dd>
+                            </dl>
+                            <a href="https://www.instagram.com/hojin0203/" target="_blank" alt="류호진 인스타그램 이동 링크" title="류호진">
+                                <img src="./layout_image/인스타그램검.png" alt="인스타그램 로고" title="인스타그램" 
+                                onmouseover="this.src='./layout_image/인스타그램노.png'" onmouseout="this.src='./layout_image/인스타그램검.png'" />
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <div class="short_line"></div>
+                <section id="content4" class="clearfix">
+                    <h2>Music</h2>
+                    <table class="music">
+                        <tr>
+                            <td><img src="./layout_image/사기꾼.jpg" alt="사기꾼 앨범커버" title="사기꾼" /></td>
+                            <td>
+                                <dl>
+                                    <dt><i><b>사기꾼</b></i></dt>
+                                    <dd>
+                                        개러지 록은 음악을 할 만한 좋은 환경과 능력을 갖추지 않아도 충분히 멋진 음악을 할 수 있다는 DIY(Do It Yourself) 정신을 담은 차고 록이다.<br />
+                                        '투 데이 올드 스니커즈'는 그들만의 러프한 색깔로 리프 위주의 단단한 사운드를 만들고 노래한다.<br />
+                                        가사와 멜로디는 날것의 느낌이 나고 기타, 베이스, 드럼은 강렬하다.<br />
+                                        정통 개러지 록에서 영향을 받았지만, 한국적인 개러지 색깔을 만들어가고 있으며,
+                                        직접적인 가사들과 중독성 있는 기타 리프로 풀어나간 앨범 안의 곡들에는 ‘투올즈'만의 개성을 담기 위한 흔적이 묻어있다.
+                                    </dd>
+                                </dl>
+                                <h3>Track list</h3>
+                                <ol>
+                                    <li id="title1">사기꾼<sup id="sup1">TITLE</sup><sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li>그래 빨간달이 떴구나 아무것도 변하지 않는다<sub>(작사 : 심도언 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li>권태<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li>캐딜락<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                </ol>
+                                <audio controls>
+                                    <source src="./layout_image/사기꾼.mp3" type="audio/mpeg" />
+                                </audio>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="music">
+                        <tr>
+                            <td>
+                                <dl>
+                                    <dt><i><b>신발장</b></i></dt>
+                                    <dd>
+                                        ‘투 데이 올드 스니커즈'의 첫번째 정규 앨범 [신발장]은, 개러지록을 하겠다는 멤버들의 고집을 모아 만든 음악 적 색깔과 그들이 걸어갈 첫번째 방향을 보여준다.<br />
+                                        투올즈만의 개성을 담기위해 노력했던 고민의 흔적들이, 마치 신발장안의 신발처럼 진열되어 있다.<br />
+                                        한 인간이 가지는 일관적인 신발 취향과 그럼에도 다양하게 소장하는 신발의 색과 디자인처럼,
+                                        서로 다른 형식과 분위기의 11곡은 곡마다 각각의 개성을 뚜렷하게 보여준다.<br />
+                                        그러나 모든 곡들은 결국 ‘투올즈'다운 하나의 색깔을 향해 가고 있다는 것을, 직접 들어보면 알게 된다.<br />
+                                        단단한 리프와 목소리를 중심으로 그들의 이야기를 최대한 담담하게 전달하면서도 강렬한 사운드를 만들어 낸다.
+                                    </dd>
+                                </dl>
+                                <h3>Track list</h3>
+                                <ol>
+                                    <li>한강<sub>(작사/작곡 : 심도언)</sub></li>
+                                    <li>종이가방<sub>(작사/작곡 : 심도언)</sub></li>
+                                    <li>그래 빨간달이 떴구나 아무것도 변하지 않는다<sub>(작사 : 심도언 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li id="title2">재규어<sup id="sup2">TITLE</sup><sub>(작사/작곡 : 심도언)</sub></li>
+                                    <li>사기꾼<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li>권태<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li>착장<sub>(작사/작곡 : 심도언)</sub></li>
+                                    <li>주인공<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li>산산조각<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li>저녁<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li>춤을 추게, 여전하게 (Dear Sally)<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                </ol>
+                                <audio controls>
+                                    <source src="./layout_image/재규어.mp3" type="audio/mpeg" />
+                                </audio>
+                            </td>
+                            <td><img src="./layout_image/신발장.png" alt="신발장 앨범커버" title="신발장" /></td>
+                        </tr>
+                    </table>
+                    <table class="music">
+                        <tr>
+                            <td><img src="./layout_image/그림자.jpg" alt="그림자 앨범커버" title="그림자" /></td>
+                            <td>
+                                <dl>
+                                    <dt><i><b>그림자</b></i></dt>
+                                    <dd>
+                                        앨범을 발매하는 과정은 음악을 하면서 가장 행복하고 보람있는 순간들이지만, 동시에 불안감과 좌절감이 그림자처럼 따라붙는 순간이기도 하다.<br />
+                                        불안감 혹은 좌절감을 잠시 떼어 놓고자 눈을 감을 수도 있다.<br />
+                                        하지만 이번 싱글을 통해서 그 불안감과 좌절감을 직시하기로 했다.<br />
+                                        땅바닥에서 두 발을 잠시 떼어놓을 수는 있어도 곧바로 다시 어딘가에 다리를 지탱해야 하듯, 그림자와 나는 떼어 놓을 수 없기 때문이다. - 심도언
+                                    </dd>
+                                    <dd>
+                                        싱글 [그림자]에는 전작인 1집 앨범 [신발장]보다 풍성한 사운드를 담기 위해 노력한 흔적이 보인다.<br />
+                                        강렬하면서도 중독성 있는 기타 리프와 멜로디는 그들의 정체성을 만들어 나가는데 핵심적인 역할을 하고 있다.<br />
+                                        개러지 록에 대한 고집이 느껴지는 직선적인 사운드도 여전하다.<br />
+                                        투 데이 올드 스니커즈와 계속 협업해 나가는 디자이너 나무13 작가의 앨범 커버 속에서 만들어지는 세계관도 인상적이다.<br />
+                                        길게 드리워진 그림자를 등지고 그들이 바라보고 있는 곳에는 어떤 것이 있을지 궁금하다.
+                                    </dd>
+                                </dl>
+                                <h3>Track list</h3>
+                                <ol>
+                                    <li id="title3">그림자<sup id="sup3">TITLE</sup><sub>(작사/작곡 : 심도언)</sub></li>
+                                </ol>
+                                <audio controls>
+                                    <source src="./layout_image/그림자.mp3" type="audio/mpeg" />
+                                </audio>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="music">
+                        <tr>
+                            <td>
+                                <dl>
+                                    <dt><i><b>오직 그곳에서만 빛난다</b></i></dt>
+                                    <dd>
+                                        우리는 어디든지 갈 수 있지만 우리가 바라는 빛은 오직 그곳에서만 난다.<br />
+                                        구멍 난 마음을 움켜쥐고 우리는 그곳으로 가기로 했다. -주해승
+                                    </dd>
+                                    <dd>
+                                        앞서 발매된 [그림자]에 이어 그들이 만든 '빛과 그림자'에 대한 세계관을 보여준다.<br />
+                                        길게 드리워진 그림자를 등지고 그들이 바라보고 있는 곳에는 빛이 있다.<br />
+                                        밴드 초기에 영향을 받은 정통 개러지 사운드를 따르면서도 투올즈만의 색깔을 내기 위해 노력했다.<br />
+                                        단단한 사운드 속의 멈추지 않는 기타 리프와 자유로운 멜로디가 곡을 이끈다.
+                                    </dd>
+                                </dl>
+                                <h3>Track list</h3>
+                                <ol>
+                                    <li id="title4">오직 그곳에서만 빛난다<sup id="sup4">TITLE</sup><sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                </ol>
+                                <audio controls>
+                                    <source src="./layout_image/오직 그곳에서만 빛난다.mp3" type="audio/mpeg" />
+                                </audio>
+                            </td>
+                            <td><img src="./layout_image/오그빛.jpg" alt="오직 그곳에서만 빛난다 앨범커버" title="오직 그곳에서만 빛난다" /></td>
+                        </tr>
+                    </table>
+                    <table class="music">
+                        <tr>
+                            <td><img src="./layout_image/여빛.jpg" alt="여기서 빛난다 앨범커버" title="여기서 빛난다" /></td>
+                            <td>
+                                <dl>
+                                    <dt><i><b>여기서 빛난다</b></i></dt>
+                                    <dd>
+                                        우리가 항상 쫓기만 했던 그 빛은 사실 스스로 내야 하는 걸지도 모른다. 우리 모두 여기서 빛난다.<br />
+                                        앞서 발매한 싱글 '그림자'와 '오직 그곳에서만 빛난다'에는 빛과 그림자에 대한 그들의 세계관이 담겨있다.<br />
+                                        EP에는 세계관 이후 더 단단해진 그들의 내면과 개러지에 대한 기조가 보인다.<br />
+                                        빛을 쫓던 이들이 빛을 내는 순간들이다.
+                                    </dd>
+                                </dl>
+                                <h3>Track list</h3>
+                                <ol>
+                                    <li>그림자<sub>(작사/작곡 : 심도언)</sub></li>
+                                    <li>오직 그곳에서만 빛난다<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                    <li>끈적한 바닥<sub>(작사/작곡 : 심도언)</sub></li>
+                                    <li id="title5">제자리에 있는건<sup id="sup5">TITLE</sup><sub>(작사/작곡 : 심도언)</sub></li>
+                                    <li>Get a grip!<sub>(작사 : 주해승 / 작곡 : 주해승, 심도언)</sub></li>
+                                </ol>
+                                <audio controls>
+                                    <source src="./layout_image/제자리에 있는건.mp3" type="audio/mpeg" />
+                                </audio>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <div class="short_line"></div>
+                <section id="content5">
+                    <h2>MV</h2>
+                    <div align="center"><iframe width="80%" height="400px" src="https://www.youtube.com/embed/QOc4eS-ZkZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                </section>
+            </div>
+            <footer>
+                <div id="footer" class="clearfix">
+                    <div class="footer_content">
+                        <h2 id="img_h2"><img src="./layout_image/logo2.png" alt="투 데이 올드 스니커즈 노랑 로고" title="logo2" /></h2>
+                        <ul>
+                            <li><a href="layout1.html" target="_blank" alt="layout1 이동 링크" title="layout1">Layout1</a></li>
+                            <li><a href="layout2.html" target="_blank" alt="layout2 이동 링크" title="layout2">Layout2</a></li>
+                            <li><a href="layout3.html" target="_blank" alt="layout3 이동 링크" title="layout3">Layout3</a></li>
+                            <li><a href="layout_sample.html" target="_blank" alt="자유 layout 이동 링크" title="layout_sample">2 DAY OLD SNEAKERS</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_content">
+                        <h2>Address</h2>
+                        <div class="FC">
+                            <dl>
+                                <dt><b>E-mail</b></dt>
+                                <dd>day6@kakao.com</dd>
+                                <dd>en0008@kaywon.ac.kr</dd>
+                            </dl>
+                            <dl>
+                                <dt><b>Instagram</b></dt>
+                                <dd>mar.0317</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="footer_content">
+                        <h2>Contact</h2>
+                        <div class="FC">
+                            <from>
+                                <div>
+                                    <h3>E-mail</h3>
+                                    <input name="id_text" type="text" placeholder="E-mail" />
+                                </div>
+                                <div>
+                                    <h3>Message</h3>
+                                    <textarea rows="4" cols="32" placeholder="Message"></textarea>
+                                </div>
+                                <div>
+                                    <button>Send</button>
+                                </div>
+                            </from>
+                        </div>
+                    </div>
+                </div>
+                <div id="copy">
+                    <div class="line"></div>
+                    <p>
+                        Copyright 2021. 백민경 all rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
