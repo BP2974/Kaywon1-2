@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>기말평가 인덱스</title>
+        <meta charset="utf-8" />
+        <style>
+            body{
+                margin: 0px;
+            }
+            #wrap{
+                min-width: 760px;
+                max-width: 1920px;
+                margin: 0px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            #main img{
+                width: 100%;
+            }
+            .clearfix::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            header h1{
+                float: left;
+                margin: 0px 0px 0px 50px;
+            }
+            header img{
+                margin: 5px 15px;
+                width: 90px;
+            }
+            nav ul{
+                float: right;
+                padding: 0px;
+                margin-right: 50px;
+            }
+            nav li{
+                list-style: none;
+                float: left;
+                padding-right: 20px;
+                margin-top: 10px;
+                margin-right: 20px;
+                border-right: solid 2px #ffcd00;;
+            }
+            nav li:last-child{
+                border-right: none;
+                margin-right: 0px;
+            }
+            nav a{
+                color: gray;
+                text-decoration: none;
+            }
+            nav a:hover{
+                color: #ffcd00;
+                text-decoration: underline;
+            }
+            footer{
+                background-color: black;
+                color: white;
+            }
+            footer h2{
+                color: #ffcd00;
+            }
+            .footer{
+                margin: 0px 50px;
+            }
+            .footer_content{
+                width: calc(33% - 120px);
+                margin: 20px 60px;
+                float: left;
+            }
+            footer img{
+                width: 80px;
+            }
+            footer h2{
+                margin-top: 15px;
+            }
+            #img_h2{
+                margin: 0px;
+            }
+            footer a{
+                color: gray;
+                text-decoration: none;
+            }
+            footer a:hover{
+                color: #ffcd00;
+            }
+            footer ul{
+                padding-left: 18px;
+                margin: 0px;
+            }
+            footer li{
+                margin: 10px 0px;
+                list-style: circle;
+            }
+            footer h3{
+                margin: 10px 0px;
+            }
+            .FC{
+                margin-top: 30px;
+            }
+            footer dd{
+                margin: 5px 0px;
+                font-size: 12px;
+                color: gray;
+            }
+            #copy{
+                text-align: center;
+                color: gray;
+                padding: 10px;
+                font-size: 10px;
+                margin: 0px;
+            }
+            .line{
+                width: 90%;
+                border-top: solid 1px lightgrey;
+                margin: 0px auto;
+            }
+            input{
+                height: 20px;
+            }
+            input, textarea{
+                width: 100%;
+                border: none;
+                background-color: rgb(36, 36, 36);
+                color: white;
+            }
+            input::placeholder, textarea::placeholder{
+                color:gray;
+            }
+            button{
+                margin-top: 15px;
+                background-color: gray;
+                width: 100%;
+                height: 30px;
+                color: white;
+            }
+            button:hover{
+                background-color: #ffcd00;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header class="clearfix">
+                <h1><img src="./layout_image/logo.png" alt="투 데이 올드 스니커즈 검정 로고" title="logo1" /></h1>
+                <nav class="clearfix">
+                    <ul class="clearfix">
+                        <li><a href="layout1.html" target="_blank" alt="layout1 이동 링크" title="layout1">Layout1</a></li>
+                        <li><a href="layout2.html" target="_blank" alt="layout2 이동 링크" title="layout2">Layout2</a></li>
+                        <li><a href="layout3.html" target="_blank" alt="layout3 이동 링크" title="layout3">Layout3</a></li>
+                        <li><a href="layout_sample.html" target="_blank" alt="자유 layout 이동 링크" title="layout_sample">2 DAY OLD SNEAKERS</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="main">
+                <img src="./layout_image/image.png" alt="메인 이미지" title="main_img"/>
+            </div>
+            <footer>
+                <div id="footer" class="clearfix">
+                    <div class="footer_content">
+                        <h2 id="img_h2"><img src="./layout_image/logo2.png" alt="투 데이 올드 스니커즈 노랑 로고" title="logo2" /></h2>
+                        <ul>
+                            <li><a href="layout1.html" target="_blank" alt="layout1 이동 링크" title="layout1">Layout1</a></li>
+                            <li><a href="layout2.html" target="_blank" alt="layout2 이동 링크" title="layout2">Layout2</a></li>
+                            <li><a href="layout3.html" target="_blank" alt="layout3 이동 링크" title="layout3">Layout3</a></li>
+                            <li><a href="layout_sample.html" target="_blank" alt="자유 layout 이동 링크" title="layout_sample">2 DAY OLD SNEAKERS</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_content">
+                        <h2>Address</h2>
+                        <div class="FC">
+                            <dl>
+                                <dt><b>E-mail</b></dt>
+                                <dd>day6@kakao.com</dd>
+                                <dd>en0008@kaywon.ac.kr</dd>
+                            </dl>
+                            <dl>
+                                <dt><b>Instagram</b></dt>
+                                <dd>mar.0317</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="footer_content">
+                        <h2>Contact</h2>
+                        <div class="FC">
+                            <from>
+                                <div>
+                                    <h3>E-mail</h3>
+                                    <input name="id_text" type="text" placeholder="E-mail" />
+                                </div>
+                                <div>
+                                    <h3>Message</h3>
+                                    <textarea rows="4" cols="32" placeholder="Message"></textarea>
+                                </div>
+                                <div>
+                                    <button>Send</button>
+                                </div>
+                            </from>
+                        </div>
+                    </div>
+                </div>
+                <div id="copy">
+                    <div class="line"></div>
+                    <p>
+                        Copyright 2021. 백민경 all rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
